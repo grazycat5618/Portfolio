@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Selo David Selo (Grazy Cat) | Cybersecurity Student & Aspiring Security Practitioner</title>
+    <meta name="description" content="Selo David Selo (Grazy Cat) : Cybersecurity student specializing in offensive security, penetration testing, and security research. Creator of Grazy Cat CyberPulse platform.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0c10; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
+        header { background: rgba(10,12,16,0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #2a2e3a; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; flex-wrap: wrap; }
+        .logo-area { display: flex; align-items: center; gap: 1rem; }
+        .logo-img { height: 50px; width: auto; border-radius: 12px; background: #1e1f2c; padding: 4px; }
+        .logo-text h1 { font-size: 1.3rem; color: #00d4ff; font-weight: 600; }
+        .logo-text p { font-size: 0.7rem; color: #8a8f9e; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: #cbd5e6; font-weight: 500; text-decoration: none; padding: 0.5rem 0; position: relative; }
+        .nav-links a:hover, .nav-links a.active { color: #00d4ff; }
+        .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background: #00d4ff; border-radius: 2px; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        section { padding: 4rem 0; border-bottom: 1px solid #1e212a; }
+        .section-title { font-size: 2rem; margin-bottom: 2rem; color: #ffffff; font-weight: 700; }
+        .about-grid { display: flex; gap: 3rem; flex-wrap: wrap; }
+        .about-text { flex: 2; }
+        .about-text p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+        .motto { margin-top: 1.5rem; font-style: italic; color: #00d4ff; font-weight: 500; border-left: 3px solid #00d4ff; padding-left: 1rem; }
+        .skills-grid, .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+        .skill-category, .project-card { background: #13161f; padding: 1.5rem; border-radius: 16px; border-left: 3px solid #00d4ff; transition: transform 0.2s, box-shadow 0.2s; }
+        .skill-category:hover, .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,212,255,0.1); }
+        .skill-category h3, .project-card h3 { margin-bottom: 0.8rem; color: #00d4ff; font-size: 1.3rem; }
+        .skill-category ul { list-style: none; padding-left: 0; }
+        .skill-category li { margin-bottom: 0.5rem; padding-left: 1rem; position: relative; }
+        .skill-category li::before { content: '▹'; position: absolute; left: 0; color: #00d4ff; }
+        .project-card p { font-size: 0.9rem; color: #b0b5c5; margin-bottom: 1rem; }
+        .project-card .btn-view { display: inline-block; background: transparent; border: 1px solid #00d4ff; color: #00d4ff; padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.8rem; cursor: pointer; transition: 0.2s; margin-top: 0.5rem; }
+        .project-card .btn-view:hover { background: #00d4ff; color: #0a0c10; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; flex-direction: column; overflow-y: auto; padding: 2rem; }
+        .modal-content { background: #13161f; max-width: 1000px; width: 90%; border-radius: 24px; padding: 2rem; border: 1px solid #00d4ff; max-height: 90vh; overflow-y: auto; }
+        .modal-content h2 { color: #00d4ff; margin-bottom: 1rem; }
+        .close-modal { float: right; font-size: 1.8rem; cursor: pointer; color: #aaa; }
+        .close-modal:hover { color: #00d4ff; }
+        .tech-badge { display: inline-block; background: #1e2a3a; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem; color: #00d4ff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .gallery-item { background: #0a0c10; border-radius: 12px; overflow: hidden; border: 1px solid #2a2e3a; cursor: pointer; transition: 0.2s; }
+        .gallery-item:hover { border-color: #00d4ff; }
+        .gallery-item img { width: 100%; height: 120px; object-fit: cover; }
+        .gallery-item .caption { padding: 0.5rem; font-size: 0.7rem; text-align: center; background: #0f1117; color: #aaa; }
+        .carousel-modal { display: none; position: fixed; z-index: 1100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); justify-content: center; align-items: center; flex-direction: column; }
+        .carousel-container { position: relative; max-width: 90%; max-height: 80%; }
+        .carousel-container img { max-width: 100%; max-height: 80vh; border-radius: 12px; border: 2px solid #00d4ff; object-fit: contain; }
+        .carousel-prev, .carousel-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; border-radius: 50%; user-select: none; }
+        .carousel-prev { left: -50px; }
+        .carousel-next { right: -50px; }
+        .close-carousel { position: absolute; top: 20px; right: 40px; font-size: 40px; color: white; cursor: pointer; }
+        .carousel-counter { position: absolute; bottom: -40px; left: 0; right: 0; text-align: center; color: #ccc; font-size: 0.9rem; }
+        @media (max-width: 768px) { .carousel-prev { left: 10px; } .carousel-next { right: 10px; } .close-carousel { top: 10px; right: 20px; font-size: 30px; } }
+        .contact-info { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; background: #0b0e14; padding: 2rem; border-radius: 24px; margin-top: 1rem; }
+        .contact-details p { margin: 0.5rem 0; }
+        .social-icons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
+        .social-icons img { width: 45px; border-radius: 50%; border: 2px solid #00d4ff; transition: 0.3s; }
+        footer { text-align: center; padding: 2rem 0; font-size: 0.8rem; color: #6c7180; }
+        .career-focus-section { background: #0b0e14; border-radius: 20px; padding: 1.8rem; margin-top: 1rem; }
+        .career-focus-section h3 { color: #00d4ff; margin-bottom: 0.8rem; font-size: 1.2rem; }
+        .career-focus-section p { font-size: 0.9rem; color: #b0b5c5; margin-bottom: 0.5rem; }
+        @media (max-width: 900px) { .skills-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .skills-grid, .projects-grid { grid-template-columns: 1fr; } .container { padding: 0 1rem; } .mobile-menu-btn { display: block; position: absolute; right: 1rem; top: 1.2rem; } .nav-links { flex-direction: column; width: 100%; display: none; text-align: center; gap: 1rem; padding: 1rem 0; } .nav-links.active { display: flex; } .logo-area { width: 100%; justify-content: space-between; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo-area">
+                <img src="Grazycat.jpeg" alt="Grazy Cat Logo" class="logo-img" onerror="this.src='https://placehold.co/50x50?text=GC'">
+                <div class="logo-text">
+                    <h1>Selo David Selo</h1>
+                    <p>Cybersecurity Student | Offensive Security & Penetration Testing (Lab Practice)</p>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#career" class="nav-link">Career Focus</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I am Selo David Selo, a cybersecurity student currently completing a Bachelor of Science in Computer Networking with a specialization in Cybersecurity at Botho University. My focus is on offensive security fundamentals, penetration testing, vulnerability discovery, and security assessment within controlled lab environments.</p>
+                <p>My academic background in computer networking provides me with a strong foundation in how systems and networks are built, configured, and maintained. I build on this knowledge by applying a security mindset, where I analyze systems to understand how they function, how they can be exploited, and how they can be secured.</p>
+                <p>I actively engage in hands-on learning through lab environments and self-built systems. My approach combines system development and security testing, allowing me to understand both the offensive and defensive sides of cybersecurity. I focus on breaking systems in controlled environments, analyzing weaknesses, and improving them through iteration and practical experience.</p>
+                <p>I have developed and worked on multiple learning systems that reflect my technical growth in both software development and cybersecurity concepts. These include web-based systems, network-based applications, and experimental security projects designed to simulate real-world environments.</p>
+                <p>I hold an Ethical Hacker Certificate from Cisco Networking Academy and a Diploma in Digital Forensics Investigation from Alison Empower Yourself, which have strengthened my understanding of security principles, digital investigation, and ethical hacking fundamentals.</p>
+                <p>My long-term career direction is focused on roles in penetration testing, offensive security, and security analysis, where I can apply my networking knowledge, programming skills, and security mindset in real-world environments. I am particularly interested in understanding attacker techniques and strengthening systems against real threats.</p>
+                <p class="motto">My guiding principle is simple: Go deep before you go dangerous. I believe in fully understanding systems before attempting to test or secure them.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Education & Core Foundation</h3>
+                <ul>
+                    <li>Bachelor of Science in Computer Networking (Cyber Security) – Botho University</li>
+                    <li>Strong foundation in network architecture, protocols, and system administration</li>
+                    <li>Applied cybersecurity specialization through academic and practical work</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Offensive Security & Cybersecurity</h3>
+                <ul>
+                    <li>Penetration Testing (Lab-Based Practice)</li>
+                    <li>Vulnerability Discovery & Security Assessment</li>
+                    <li>Web Application Security Concepts</li>
+                    <li>Network Security Analysis</li>
+                    <li>CTF Platforms (Hack The Box, VulnHub)</li>
+                    <li>Security Thinking & Attack Simulation Concepts</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Programming & Software Development</h3>
+                <ul>
+                    <li>Python (Security tools & automation)</li>
+                    <li>PHP (Backend systems)</li>
+                    <li>JavaScript (Web applications)</li>
+                    <li>C++ (Systems programming fundamentals)</li>
+                    <li>MySQL (Database design and management)</li>
+                    <li>HTML / CSS (Web development)</li>
+                    <li>REST API Fundamentals</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Networking & Systems Engineering</h3>
+                <ul>
+                    <li>TCP/IP Networking</li>
+                    <li>Network Protocol Analysis</li>
+                    <li>Linux System Administration</li>
+                    <li>Windows System Fundamentals</li>
+                    <li>Firewall & IDS/IPS Concepts</li>
+                    <li>SNMP / Network Monitoring Concepts</li>
+                    <li>GSM / LTE Security Exploration (Experimental Learning)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Practical Skills & Tools (Lab Experience)</h3>
+                <ul>
+                    <li>Command Line Security Tools</li>
+                    <li>Network Scanning Techniques (Learning Stage)</li>
+                    <li>Vulnerability Analysis Concepts</li>
+                    <li>Log Interpretation Basics</li>
+                    <li>Security Monitoring Principles</li>
+                    <li>System Testing in Controlled Environments</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects & Learning Journey</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project="cyberpulse"><h3>🔒 Grazy Cat CyberPulse</h3><p>Lab-based SOC-style platform with network monitoring, threat tracking, and GSM/LTE analysis modules (in development).</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="grazywebsite"><h3>🌐 Grazy Cat Cyber Security</h3><p>My cybersecurity brand website – learning project with course management, contact forms, and dynamic content.</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="forensics"><h3>🔍 Digital Forensics</h3><p>Certified course – digital evidence collection, chain of custody, and incident response concepts.</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="vulnscanner"><h3>🛡️ Network Scanner (Planned)</h3><p>Python-based vulnerability scanner concept – port scanning, service enumeration, CVE detection learning.</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="traffic"><h3>🚦 Grazy Cat Traffic Mgmt</h3><p>Traffic offence and driver licensing system. Learning project focused on database design and CRUD operations.</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="restaurant"><h3>🌶️ Gray Cat Spicy Treats</h3><p>Restaurant web platform – learning project for user authentication, menu systems, and frontend/backend integration.</p><div class="btn-view">View Details →</div></div>
+            <div class="project-card" data-project="hotels"><h3>🏨 Grazy Cat Hotels</h3><p>Hotel booking system with role-based panels, room management, and basic analytics. Learning project for multi-user systems.</p><div class="btn-view">View Details →</div></div>
+        </div>
+    </section>
+
+    <section id="career">
+        <h2 class="section-title">Career Focus</h2>
+        <div class="career-focus-section">
+            <p>My professional goal is to enter the cybersecurity field through internships or entry-level roles in:</p>
+            <p>• Penetration Testing</p>
+            <p>• Security Analysis / SOC Operations</p>
+            <p>• Offensive Security Research (long-term development path)</p>
+            <p style="margin-top: 12px;">I am focused on building real-world experience where I can apply my networking background, programming skills, and offensive security knowledge to identify, analyze, and mitigate security risks in systems and networks.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Connect With Me</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p><i class="fas fa-envelope" style="color:#00d4ff;"></i> <strong>Email:</strong> selodavidselograzycat@gmail.com</p>
+                <p><i class="fas fa-phone" style="color:#00d4ff;"></i> <strong>Phone:</strong> +266 63868907</p>
+                <p><i class="fas fa-map-marker-alt" style="color:#00d4ff;"></i> <strong>Location:</strong> Ha Sekepe, Mazenod, Maseru, Lesotho</p>
+                <p><i class="fas fa-graduation-cap" style="color:#00d4ff;"></i> <strong>Education:</strong> BSc Computer Networking (Cyber Security) – Botho University</p>
+                <p><i class="fas fa-certificate" style="color:#00d4ff;"></i> <strong>Certifications:</strong> Ethical Hacker (Cisco), Digital Forensics (Alison)</p>
+                <p><i class="fas fa-globe" style="color:#00d4ff;"></i> <strong>Portfolio:</strong> <a href="https://grazycat5618.github.io/Portfolio/" target="_blank" style="color:#90e0ef;">grazycat5618.github.io/Portfolio</a></p>
+            </div>
+            <div class="contact-details">
+                <p><strong>Find me on social media:</strong></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/selodavidselo" target="_blank"><img src="Facebook.jpg" alt="Facebook"></a>
+                    <a href="https://wa.me/qr/LRB7TMDT2NSTF1" target="_blank"><img src="whatsapp.jpg" alt="WhatsApp"></a>
+                    <a href="https://x.com/SeloDavidSelo" target="_blank"><img src="twitterX.jpg" alt="X (Twitter)"></a>
+                    <a href="https://www.linkedin.com/in/selo-david-selo" target="_blank"><img src="linkedin.jpg" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/selo_david_selo" target="_blank"><img src="insta.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer><p>© 2026 Selo David Selo (Grazy Cat) — "Go deep before you go dangerous."</p></footer>
+
+<div id="projectModal" class="modal"><div class="modal-content"><span class="close-modal">&times;</span><div id="modal-body"></div></div></div>
+<div id="carouselModal" class="carousel-modal"><span class="close-carousel">&times;</span><div class="carousel-container"><span class="carousel-prev"><i class="fas fa-chevron-left"></i></span><img id="carouselImage" src="" alt="Full size"><span class="carousel-next"><i class="fas fa-chevron-right"></i></span><div class="carousel-counter"><span id="currentIdx">1</span> / <span id="totalCount">1</span></div></div></div>
+
+<script>
+    const projectsData = {
+        cyberpulse: {
+            title: "Grazy Cat CyberPulse (Lab Project)",
+            description: `<p><strong>Grazy_Cat CyberPulse</strong> is a lab-based network intelligence platform I'm building to learn SOC operations, network monitoring, and cellular security concepts.</p>
+            <div><span class="tech-badge">PHP 7.4+</span><span class="tech-badge">MySQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Python</span><span class="tech-badge">SDR concepts</span></div>
+            <p><strong>Learning focus:</strong> Dashboard design, device inventory tracking, threat alert concepts, cell tower coverage analytics, terminal scanning modules, and experimental GSM/LTE analysis.</p>`,
+            images: Array.from({ length: 31 }, (_, i) => `${i.toString().padStart(2,'0')}.png`)
+        },
+        grazywebsite: {
+            title: "Grazy Cat Cyber Security Website",
+            description: `<p>My cybersecurity brand website – a learning project built with PHP, MySQL, and modern frontend (HTML5/CSS3/JS). The site includes a course management system concept, contact forms, newsletter, and dynamic content.</p>
+            <div><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Responsive Design</span></div>`,
+            images: ["1000465682.jpg", "1000465683.jpg", "1000465684.jpg", "1000465685.jpg", "1000465686.jpg", "1000465687.jpg", "1000465688.jpg"]
+        },
+        forensics: {
+            title: "Digital Forensics Investigation (Certification)",
+            description: `<p>Certified course covering digital evidence collection, analysis, chain of custody, and investigation methodologies.</p>
+            <div><span class="tech-badge">Digital Forensics</span><span class="tech-badge">Evidence Handling</span><span class="tech-badge">Incident Response</span></div>`,
+            images: ["forensics_cert.jpg"]
+        },
+        vulnscanner: {
+            title: "Network Vulnerability Scanner (Planned Project)",
+            description: `<p>Planned Python-based network vulnerability scanner for learning purposes. Will explore port scanning, service enumeration, CVE detection concepts, and plugin structure.</p>
+            <div><span class="tech-badge">Python</span><span class="tech-badge">Scapy</span><span class="tech-badge">NMAP integration</span></div>`,
+            images: ["scanner_arch.png"]
+        },
+        traffic: {
+            title: "Grazy Cat Traffic Management System",
+            description: `<p>A learning project for traffic offence and driver licensing management. Built with PHP, MySQL, Bootstrap.</p>
+            <div><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">Bootstrap</span></div>
+            <h3>Learning Focus</h3>
+            <ul><li>Driver licensing dashboard (CRUD operations)</li><li>Traffic offence recording with fines</li><li>Outstanding fines summary & top offenders</li><li>License expiry tracking concepts</li></ul>`,
+            images: ["1000465698.jpg", "1000465699.jpg", "1000465700.jpg", "1000465701.jpg", "1000465702.jpg"]
+        },
+        restaurant: {
+            title: "Gray Cat Spicy Treats – Restaurant Web Platform",
+            description: `<p>Learning project for a restaurant website. Includes user authentication, menu browsing, account management.</p>
+            <div><span class="tech-badge">HTML5/CSS3</span><span class="tech-badge">JavaScript</span><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span></div>
+            <h3>Learning Modules</h3>
+            <ul><li>Landing page with "Experience the Heat"</li><li>Dynamic menu (Appetizers, Main Courses, Beverages, Desserts)</li><li>User registration & login system</li><li>"Remember me" functionality</li></ul>`,
+            images: ["1000465706.jpg", "1000465703.jpg", "1000465705.jpg", "1000465704.jpg"]
+        },
+        hotels: {
+            title: "Grazy Cat Hotels – Booking System Project",
+            description: `<p>Learning project for a multi‑user hotel booking platform with admin, hotel manager, and client role concepts. Built with PHP, MySQL, Chart.js.</p>
+            <div><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">Chart.js</span><span class="tech-badge">Bootstrap</span></div>`,
+            images: ["001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg", "007.jpg", "008.jpg", "009.jpg"]
+        }
+    };
+
+    let currentCarouselImages = [];
+    let currentCarouselIndex = 0;
+    function openCarousel(imagesArray, startIndex) {
+        if (!imagesArray.length) return;
+        currentCarouselImages = imagesArray;
+        currentCarouselIndex = startIndex;
+        document.getElementById('totalCount').innerText = imagesArray.length;
+        updateCarouselImage();
+        document.getElementById('carouselModal').style.display = 'flex';
+    }
+    function updateCarouselImage() {
+        const img = document.getElementById('carouselImage');
+        img.src = currentCarouselImages[currentCarouselIndex];
+        img.onerror = () => { img.src = 'https://placehold.co/800x500?text=Missing+Image'; };
+        document.getElementById('currentIdx').innerText = currentCarouselIndex + 1;
+    }
+    function nextImage() { if (currentCarouselImages.length) { currentCarouselIndex = (currentCarouselIndex + 1) % currentCarouselImages.length; updateCarouselImage(); } }
+    function prevImage() { if (currentCarouselImages.length) { currentCarouselIndex = (currentCarouselIndex - 1 + currentCarouselImages.length) % currentCarouselImages.length; updateCarouselImage(); } }
+
+    function buildThumbnailGallery(containerId, imagesArray) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        imagesArray.forEach((src, idx) => {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            const img = document.createElement('img');
+            img.src = src;
+            img.onerror = () => { img.src = 'https://placehold.co/180x120?text=Missing'; };
+            const cap = document.createElement('div');
+            cap.className = 'caption';
+            cap.textContent = `Image ${idx+1}`;
+            div.appendChild(img);
+            div.appendChild(cap);
+            div.onclick = () => openCarousel(imagesArray, idx);
+            container.appendChild(div);
+        });
+    }
+
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modal-body');
+    const closeModalSpan = document.querySelector('.close-modal');
+    document.querySelectorAll('.project-card .btn-view').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const card = btn.closest('.project-card');
+            const key = card.getAttribute('data-project');
+            const data = projectsData[key];
+            if (data) {
+                const galleryHtml = `<div class="screenshot-gallery"><h3>📸 Screenshots (click any to browse)</h3><div id="gallery-${key}" class="gallery-grid"></div></div>`;
+                modalBody.innerHTML = `<h2>${data.title}</h2>${data.description}${galleryHtml}`;
+                modal.style.display = 'flex';
+                setTimeout(() => buildThumbnailGallery(`gallery-${key}`, data.images), 50);
+            }
+        });
+    });
+    closeModalSpan.onclick = () => { modal.style.display = 'none'; modalBody.innerHTML = ''; };
+    window.onclick = (event) => {
+        if (event.target === modal) { modal.style.display = 'none'; modalBody.innerHTML = ''; }
+        if (event.target === document.getElementById('carouselModal')) document.getElementById('carouselModal').style.display = 'none';
+    };
+    document.querySelector('.carousel-prev').addEventListener('click', prevImage);
+    document.querySelector('.carousel-next').addEventListener('click', nextImage);
+    document.querySelector('.close-carousel').addEventListener('click', () => document.getElementById('carouselModal').style.display = 'none');
+    document.addEventListener('keydown', (e) => {
+        const cm = document.getElementById('carouselModal');
+        if (cm.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') prevImage();
+            else if (e.key === 'ArrowRight') nextImage();
+            else if (e.key === 'Escape') cm.style.display = 'none';
+        }
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function updateActiveNav() {
+        let scrollPos = window.scrollY + 150;
+        let currentId = '';
+        sections.forEach(section => {
+            const top = section.offsetTop, bottom = top + section.clientHeight;
+            if (scrollPos >= top && scrollPos < bottom) currentId = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentId}`) link.classList.add('active');
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('active'));
+</script>
+</body>
+</html>

@@ -37,7 +37,7 @@
         .skill-category li::before { content: '▹'; position: absolute; left: 0; color: #00d4ff; }
         .project-card p { font-size: 0.9rem; color: #b0b5c5; margin-bottom: 1rem; }
         
-        /* Updated Buttons for Projects */
+        /* Project Buttons */
         .project-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem; }
         .btn-view, .btn-video { display: inline-block; background: transparent; border: 1px solid #00d4ff; color: #00d4ff; padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.8rem; cursor: pointer; transition: 0.2s; text-decoration: none;}
         .btn-video { border-color: #ff4757; color: #ff4757; }
@@ -78,7 +78,7 @@
         @media (max-width: 900px) { .skills-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .skills-grid, .projects-grid { grid-template-columns: 1fr; } .container { padding: 0 1rem; } .mobile-menu-btn { display: block; position: absolute; right: 1rem; top: 1.2rem; } .nav-links { flex-direction: column; width: 100%; display: none; text-align: center; gap: 1rem; padding: 1rem 0; } .nav-links.active { display: flex; } .logo-area { width: 100%; justify-content: space-between; } }
         
-        /* Video Modal Styles */
+        /* Video Modal */
         .video-modal { display: none; position: fixed; z-index: 1200; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; flex-direction: column; padding: 20px; }
         .video-modal-content { width: 90%; max-width: 900px; background: #000; border-radius: 12px; border: 2px solid #ff4757; position: relative; }
         .video-modal-content video, .video-modal-content iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; display: block; }
@@ -94,7 +94,7 @@
                 <img src="Grazycat.jpeg" alt="Grazy Cat Logo" class="logo-img" onerror="this.src='https://placehold.co/50x50?text=GC'">
                 <div class="logo-text">
                     <h1>Selo David Sethibo</h1>
-                    <p>Cybersecurity Student | Offensive Security & Penetration Testing</p>
+                    <p>Cybersecurity Student | Computer Networking | Information Security</p>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
             </div>
@@ -130,7 +130,7 @@
             <div class="skill-category">
                 <h3>Education & Core Foundation</h3>
                 <ul>
-                    <li>Bachelor of Science in Computer Networking (Cyber Security) – Botho University (Final Year)</li>
+                    <li>Bachelor of Science in Computer Networking (Cyber Security) - Botho University (Final Year)</li>
                     <li>Strong foundation in network architecture, protocols, and system administration</li>
                     <li>Applied cybersecurity specialization through academic and practical work</li>
                 </ul>
@@ -185,39 +185,29 @@
     <section id="projects">
         <h2 class="section-title">My Projects & Learning Journey</h2>
         <div class="projects-grid">
-            <!-- Project Cards -->
             <div class="project-card" data-project="cyberpulse">
                 <h3>🔒 Grazy Cat CyberPulse</h3>
                 <p>Lab-based SOC-style platform with network monitoring, threat tracking, and GSM/LTE analysis modules (in development).</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="cyberpulse"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
             
             <div class="project-card" data-project="grazywebsite">
                 <h3>🌐 Grazy Cat Cyber Security</h3>
-                <p>My cybersecurity brand website – learning project with course management, contact forms, and dynamic content.</p>
+                <p>My cybersecurity brand website - learning project with course management, contact forms, and dynamic content.</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="grazywebsite"><i class="fas fa-play"></i> Watch Demo</div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-project="forensics">
-                <h3>🔍 Digital Forensics</h3>
-                <p>Certified course – digital evidence collection, chain of custody, and incident response concepts.</p>
-                <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
-                    <div class="btn-video" data-video="forensics"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
             
             <div class="project-card" data-project="vulnscanner">
                 <h3>🛡️ Network Scanner (Planned)</h3>
-                <p>Python-based vulnerability scanner concept – port scanning, service enumeration, CVE detection learning.</p>
+                <p>Python-based vulnerability scanner concept - port scanning, service enumeration, CVE detection learning.</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="vulnscanner"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
@@ -226,16 +216,16 @@
                 <h3>🚦 Grazy Cat Traffic Mgmt</h3>
                 <p>Traffic offence and driver licensing system. Learning project focused on database design and CRUD operations.</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="traffic"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
             
             <div class="project-card" data-project="restaurant">
                 <h3>🌶️ Gray Cat Spicy Treats</h3>
-                <p>Restaurant web platform – learning project for user authentication, menu systems, and frontend/backend integration.</p>
+                <p>Restaurant web platform - learning project for user authentication, menu systems, and frontend/backend integration.</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="restaurant"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
@@ -244,7 +234,7 @@
                 <h3>🏨 Grazy Cat Hotels</h3>
                 <p>Hotel booking system with role-based panels, room management, and basic analytics. Learning project for multi-user systems.</p>
                 <div class="project-buttons">
-                    <div class="btn-view">View Details →</div>
+                    <div class="btn-view">View Details -></div>
                     <div class="btn-video" data-video="hotels"><i class="fas fa-play"></i> Watch Demo</div>
                 </div>
             </div>
@@ -269,7 +259,7 @@
                 <p><i class="fas fa-envelope" style="color:#00d4ff;"></i> <strong>Email:</strong> selodavidselograzycat@gmail.com</p>
                 <p><i class="fas fa-phone" style="color:#00d4ff;"></i> <strong>Phone:</strong> +266 63868907</p>
                 <p><i class="fas fa-map-marker-alt" style="color:#00d4ff;"></i> <strong>Location:</strong> Ha Sekepe, Mazenod, Maseru, Lesotho</p>
-                <p><i class="fas fa-graduation-cap" style="color:#00d4ff;"></i> <strong>Education:</strong> BSc Computer Networking (Cyber Security) – Botho University (Final Year)</p>
+                <p><i class="fas fa-graduation-cap" style="color:#00d4ff;"></i> <strong>Education:</strong> BSc Computer Networking (Cyber Security) - Botho University (Final Year)</p>
                 <p><i class="fas fa-certificate" style="color:#00d4ff;"></i> <strong>Certifications:</strong> Ethical Hacker (Cisco), Digital Forensics (Alison), Ignite Africa (Silver/Gold)</p>
                 <p><i class="fas fa-globe" style="color:#00d4ff;"></i> <strong>Portfolio:</strong> <a href="https://grazycat5618.github.io/Portfolio/" target="_blank" style="color:#90e0ef;">grazycat5618.github.io/Portfolio</a></p>
             </div>
@@ -286,13 +276,11 @@
         </div>
     </section>
 </main>
-<footer><p>© 2026 Selo David Sethibo (Grazy Cat) — "Go deep before you go dangerous."</p></footer>
+<footer><p>© 2026 Selo David Sethibo (Grazy Cat) - "Go deep before you go dangerous."</p></footer>
 
-<!-- Modals -->
 <div id="projectModal" class="modal"><div class="modal-content"><span class="close-modal">&times;</span><div id="modal-body"></div></div></div>
 <div id="carouselModal" class="carousel-modal"><span class="close-carousel">&times;</span><div class="carousel-container"><span class="carousel-prev"><i class="fas fa-chevron-left"></i></span><img id="carouselImage" src="" alt="Full size"><span class="carousel-next"><i class="fas fa-chevron-right"></i></span><div class="carousel-counter"><span id="currentIdx">1</span> / <span id="totalCount">1</span></div></div></div>
 
-<!-- Video Modal -->
 <div id="videoModal" class="video-modal">
     <div class="video-modal-content">
         <span class="close-video">&times;</span>
@@ -308,28 +296,21 @@
             <div><span class="tech-badge">PHP 7.4+</span><span class="tech-badge">MySQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Python</span><span class="tech-badge">SDR concepts</span></div>
             <p><strong>Learning focus:</strong> Dashboard design, device inventory tracking, threat alert concepts, cell tower coverage analytics, terminal scanning modules, and experimental GSM/LTE analysis.</p>`,
             images: Array.from({ length: 31 }, (_, i) => `${i.toString().padStart(2,'0')}.png`),
-            videoUrl: "" // Add YouTube Embed URL here e.g. "https://www.youtube.com/embed/12345" or local file "cyberpulse_demo.mp4"
+            videoUrl: "cyberpulse_demo.mp4" 
         },
         grazywebsite: {
             title: "Grazy Cat Cyber Security Website",
-            description: `<p>My cybersecurity brand website – a learning project built with PHP, MySQL, and modern frontend (HTML5/CSS3/JS). The site includes a course management system concept, contact forms, newsletter, and dynamic content.</p>
+            description: `<p>My cybersecurity brand website - a learning project built with PHP, MySQL, and modern frontend (HTML5/CSS3/JS). The site includes a course management system concept, contact forms, newsletter, and dynamic content.</p>
             <div><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Responsive Design</span></div>`,
             images: ["1000465682.jpg", "1000465683.jpg", "1000465684.jpg", "1000465685.jpg", "1000465686.jpg", "1000465687.jpg", "1000465688.jpg"],
-            videoUrl: "" 
-        },
-        forensics: {
-            title: "Digital Forensics Investigation (Certification)",
-            description: `<p>Certified course covering digital evidence collection, analysis, chain of custody, and investigation methodologies.</p>
-            <div><span class="tech-badge">Digital Forensics</span><span class="tech-badge">Evidence Handling</span><span class="tech-badge">Incident Response</span></div>`,
-            images: ["forensics_cert.jpg"],
-            videoUrl: ""
+            videoUrl: "grazywebsite_demo.mp4" 
         },
         vulnscanner: {
             title: "Network Vulnerability Scanner (Planned Project)",
             description: `<p>Planned Python-based network vulnerability scanner for learning purposes. Will explore port scanning, service enumeration, CVE detection concepts, and plugin structure.</p>
             <div><span class="tech-badge">Python</span><span class="tech-badge">Scapy</span><span class="tech-badge">NMAP integration</span></div>`,
             images: ["scanner_arch.png"],
-            videoUrl: ""
+            videoUrl: "vulnscanner_demo.mp4"
         },
         traffic: {
             title: "Grazy Cat Traffic Management System",
@@ -338,27 +319,26 @@
             <h3>Learning Focus</h3>
             <ul><li>Driver licensing dashboard (CRUD operations)</li><li>Traffic offence recording with fines</li><li>Outstanding fines summary & top offenders</li><li>License expiry tracking concepts</li></ul>`,
             images: ["1000465698.jpg", "1000465699.jpg", "1000465700.jpg", "1000465701.jpg", "1000465702.jpg"],
-            videoUrl: ""
+            videoUrl: "traffic_demo.mp4"
         },
         restaurant: {
-            title: "Gray Cat Spicy Treats – Restaurant Web Platform",
+            title: "Gray Cat Spicy Treats - Restaurant Web Platform",
             description: `<p>Learning project for a restaurant website. Includes user authentication, menu browsing, account management.</p>
             <div><span class="tech-badge">HTML5/CSS3</span><span class="tech-badge">JavaScript</span><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span></div>
             <h3>Learning Modules</h3>
             <ul><li>Landing page with "Experience the Heat"</li><li>Dynamic menu (Appetizers, Main Courses, Beverages, Desserts)</li><li>User registration & login system</li><li>"Remember me" functionality</li></ul>`,
             images: ["1000465706.jpg", "1000465703.jpg", "1000465705.jpg", "1000465704.jpg"],
-            videoUrl: ""
+            videoUrl: "restaurant_demo.mp4"
         },
         hotels: {
-            title: "Grazy Cat Hotels – Booking System Project",
-            description: `<p>Learning project for a multi‑user hotel booking platform with admin, hotel manager, and client role concepts. Built with PHP, MySQL, Chart.js.</p>
+            title: "Grazy Cat Hotels - Booking System Project",
+            description: `<p>Learning project for a multi-user hotel booking platform with admin, hotel manager, and client role concepts. Built with PHP, MySQL, Chart.js.</p>
             <div><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">Chart.js</span><span class="tech-badge">Bootstrap</span></div>`,
             images: ["001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg", "007.jpg", "008.jpg", "009.jpg"],
-            videoUrl: ""
+            videoUrl: "hotels_demo.mp4"
         }
     };
 
-    // --- Carousel Logic ---
     let currentCarouselImages = [];
     let currentCarouselIndex = 0;
     function openCarousel(imagesArray, startIndex) {
@@ -398,7 +378,6 @@
         });
     }
 
-    // --- Project Details Modal ---
     const modal = document.getElementById('projectModal');
     const modalBody = document.getElementById('modal-body');
     const closeModalSpan = document.querySelector('.close-modal');
@@ -419,9 +398,75 @@
     
     closeModalSpan.onclick = () => { modal.style.display = 'none'; modalBody.innerHTML = ''; };
 
-    // --- Video Modal Logic ---
     const videoModal = document.getElementById('videoModal');
     const videoContainer = document.getElementById('videoContainer');
     const closeVideo = document.querySelector('.close-video');
 
-    document.querySelectorAll('.btn-video
+    document.querySelectorAll('.btn-video').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const videoKey = btn.getAttribute('data-video');
+            const videoData = projectsData[videoKey].videoUrl;
+
+            if (!videoData) {
+                alert("Video demo is currently being recorded and will be uploaded soon!");
+                return;
+            }
+
+            if (videoData.includes('youtube.com') || videoData.includes('vimeo.com')) {
+                videoContainer.innerHTML = `<iframe src="${videoData}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            } else {
+                videoContainer.innerHTML = `<video src="${videoData}" controls autoplay></video>`;
+            }
+            
+            videoModal.style.display = 'flex';
+        });
+    });
+
+    closeVideo.onclick = () => {
+        videoModal.style.display = 'none';
+        videoContainer.innerHTML = ''; 
+    };
+
+    window.onclick = (event) => {
+        if (event.target === modal) { modal.style.display = 'none'; modalBody.innerHTML = ''; }
+        if (event.target === document.getElementById('carouselModal')) document.getElementById('carouselModal').style.display = 'none';
+        if (event.target === videoModal) { videoModal.style.display = 'none'; videoContainer.innerHTML = ''; }
+    };
+
+    document.querySelector('.carousel-prev').addEventListener('click', prevImage);
+    document.querySelector('.carousel-next').addEventListener('click', nextImage);
+    document.querySelector('.close-carousel').addEventListener('click', () => document.getElementById('carouselModal').style.display = 'none');
+    
+    document.addEventListener('keydown', (e) => {
+        const cm = document.getElementById('carouselModal');
+        if (cm.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') prevImage();
+            else if (e.key === 'ArrowRight') nextImage();
+            else if (e.key === 'Escape') cm.style.display = 'none';
+        }
+        if (e.key === 'Escape' && videoModal.style.display === 'flex') {
+            videoModal.style.display = 'none';
+            videoContainer.innerHTML = '';
+        }
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function updateActiveNav() {
+        let scrollPos = window.scrollY + 150;
+        let currentId = '';
+        sections.forEach(section => {
+            const top = section.offsetTop, bottom = top + section.clientHeight;
+            if (scrollPos >= top && scrollPos < bottom) currentId = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentId}`) link.classList.add('active');
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('active'));
+</script>
+</body>
+</html>
